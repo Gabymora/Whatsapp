@@ -1,0 +1,140 @@
+.bkver{			/*..background verde, fondo superior*/
+	background-color: #04996D;
+	width: 100%;
+	height: 100px;
+}
+.bkgray{		/*backgroud gris, fondo inferior*/
+	background-color: #C5C5C5;
+	width: 100%;
+	margin-top: 10%;
+}
+.mgt-5{			/*margen superior*/
+	margin-top: 5%;
+}
+.panel1 {		/*tamaño del panel general*/
+	width: 35%;
+	float: left;
+}
+.img1 { 		/*Imagen del perfil, principal*/
+	width: 35px;
+	border-radius: 50px;
+}
+.icon-puntos{
+	display: inline-block;
+	padding-top: 1%;
+	margin-left: 23%;
+	font-size: 18px;
+	position: absolute;	
+}
+.ico{
+	color: #949494;
+	cursor: pointer;
+}
+
+.bt1 {		/*imagen de la lupa de buscar*/
+	background-color: transparent;
+	margin-left: 2%;
+	border:none;
+	color: #999;
+}
+.inputp{		/*Texto de buscar*/
+    position: absolute;
+    top: 19%;
+    left: 11%;
+    color: #999;
+    pointer-events: none;
+    font-size: 15px;
+    line-height: 20px;
+    z-index: 0;
+}
+.search {		/*Caja de label*/
+    box-sizing: border-box;
+    margin-top: -28px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    border: 1px solid #E4E2E2;
+    height: 34px;
+    border-radius: 5px;
+    background-clip: padding-box;
+    background-color: #fff;
+
+ }
+ .input-search {	/*Caja de search para escribir, en esta parte no logro borrar las letras */
+    padding: 4px;
+    width: 100%;
+    font-size: 15px;
+    z-index: 1;
+    text-align: left;
+    background-color: transparent;
+    border:none;
+}
+.img2{		/*propiedades de las imagenes lado izquierdo del usuario*/
+	width: 40px;
+	border-radius: 50%;
+	display: inline-block;
+	margin-top: -5%;
+}
+.bt{
+	border-top: 1px solid #ddd; 
+}
+
+.mrg{		/*margen de los iconos de mnsj y 3 puntitos*/
+	margin-left: 5%;
+	display: inline-block;
+	line-height: 5%;
+}
+.p1{		/*posicion del texto de la hr*/
+	display: inline-block;
+	float: right;
+}
+.panel2 {		/*tamaño del panel de mensajes*/
+	width: 65%;
+	display: inline-block;
+	float: right;
+}
+.panel3{
+	height: 56px;
+}
+.img3{		/*propiedades de las imagenes lado izquierdo del usuario*/
+	width: 30px;
+	border-radius: 50%;
+	margin-top: -4%;
+	display: inline-block;
+}
+.mrg2{		/*margen del texto del chat*/
+	margin-left: 3%;
+	display: inline-block;
+	margin-top:-1%;
+}
+.icoons{		/*propiedades de los iconos de adjuntar y 3 puntitos*/
+	font-size: 18px;
+	float: right;
+	display: inline-block;
+	cursor: pointer;
+}
+.bkchat {		/*background del chat*/
+	background-image: url(../image/chat-panel-bg.png);
+	background-size: 100%;
+}
+
+#globo{
+    width: 200px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #555;
+    background-color: #ddd;
+    position: relative;
+    color: black;
+}
+#globo:before{
+    content: "";
+    width: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 5px 10px 5px 0;
+    border-color: transparent #ddd;
+    top: 20px;
+    left: -10px;
+}
