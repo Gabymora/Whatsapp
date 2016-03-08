@@ -1,3 +1,7 @@
+.sec{
+	background-color: red;
+
+}
 .bkver{			/*..background verde, fondo superior*/
 	background-color: #04996D;
 	width: 100%;
@@ -40,12 +44,10 @@
 .inputp{		/*Texto de buscar*/
     position: absolute;
     top: 19%;
-    left: 11%;
+    left: 8%;
     color: #999;
     pointer-events: none;
-    font-size: 15px;
     line-height: 20px;
-    z-index: 0;
 }
 .search {		/*Caja de label*/
     box-sizing: border-box;
@@ -54,15 +56,14 @@
     -webkit-box-align: center;
     align-items: center;
     border: 1px solid #E4E2E2;
-    height: 34px;
+    height: 40px;
     border-radius: 5px;
     background-clip: padding-box;
     background-color: #fff;
-
  }
- .input-search {	/*Caja de search para escribir, en esta parte no logro borrar las letras */
+ .input-search {	/*Caja de search para escribir*/
     padding: 4px;
-    width: 100%;
+    width: 26%;
     font-size: 15px;
     z-index: 1;
     text-align: left;
@@ -118,15 +119,15 @@
 	background-size: 100%;
 }
 
+/*................................Globos de conversacion.................................*/
 #globo{
-    width: 200px;
-    height: 50px;
+    width: 55%;
+    height: 83px;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 5px #555;
-    background-color: #ddd;
+    background-color: #FDF9F4;
     position: relative;
-    color: black;
 }
 #globo:before{
     content: "";
@@ -134,7 +135,105 @@
     position: absolute;
     border-style: solid;
     border-width: 5px 10px 5px 0;
-    border-color: transparent #ddd;
+    border-color: transparent #FDF9F4;
     top: 20px;
     left: -10px;
+}
+.mb-1{
+	margin-bottom: 1%;
+}
+#globo2{
+    width: 35%;
+    height: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #555;
+    background-color: #FBE991;
+    position: relative;
+    float:right;
+    
+}
+#globo2:before{
+    content: "";
+    width: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 5px 0 5px 10px;
+    border-color: transparent #FBE991;
+    top: 20px;
+    right: -10px;
+}
+
+#globo3{
+    width: 28%;
+    height: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #555;
+    background-color: #FBE991;
+    position: relative;
+    margin-top: 10%;
+    margin-left: 72%;
+}
+#globo3:before{
+    content: "";
+    width: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 5px 0 5px 10px;
+    border-color: transparent #FBE991;
+    top: 20px;
+    right: -10px;
+}
+
+/*............................chat............................*/
+.p2{
+	color: #71DCFB;
+	font-size: 16px;
+	text-align: left;
+	line-height: 12px;
+}
+.p3{
+	color: black;
+	font-size: 15px;
+	text-align: left;
+}
+.p4{
+	color:black;
+	font-size: 13px;
+	text-align: right;
+}
+.p5{
+	color: #FE368B;
+	font-size: 16px;
+	text-align: left;
+	line-height: 12px;
+}
+.p6{
+	color: #68F8B3;
+	font-size: 16px;
+	text-align: left;
+	line-height: 12px;
+}
+.p7{
+	color: #F8CB7D;
+	font-size: 16px;
+	text-align: left;
+	line-height: 12px;
+}
+/*............................................................*/
+.bkchat2{
+	background-color: #ddd;
+	border:1px solid #ddd;
+	height: 77px;
+}
+.input-mnsj{
+	width: 80%;
+    margin-left: 5%;
+    padding: 1%;
+}
+.icomico{
+	font-size: 25px;
+    display: inline-block;
+    float: right;
 }
