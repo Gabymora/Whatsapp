@@ -16,21 +16,28 @@
 	margin-top: 5%;
 }
 .panel1 {		/*tamaño del panel general*/
-	width: 35%;
+	width: 75%;
 	float: left;
 }
 .img1 { 		/*Imagen del perfil, principal*/
 	width: 35px;
 	border-radius: 50px;
 }
-.icon-puntos{
+.icon-puntos{	/*posisicion del icono de mensajes mensajes*/
 	display: inline-block;
 	padding-top: 1%;
-	margin-left: 23%;
+	margin-left: 25%;
 	font-size: 18px;
-	position: absolute;	
+	position: relative;	
 }
-.ico{
+.icon-puntos2 {		/*Posicion del icono de los tres puntitos*/
+	display: inline-block;
+	padding-top: 1%;
+	margin-left: -25%;
+	font-size: 18px;
+	position: relative;	
+}
+.ico{			/*puntero del icono*/
 	color: #949494;
 	cursor: pointer;
 }
@@ -43,11 +50,9 @@
 }
 .inputp{		/*Texto de buscar*/
     position: absolute;
-    top: 19%;
-    left: 8%;
+    left: 17%;
     color: #999;
     pointer-events: none;
-    line-height: 20px;
 }
 .search {		/*Caja de label*/
     box-sizing: border-box;
@@ -62,8 +67,8 @@
     background-color: #fff;
  }
  .input-search {	/*Caja de search para escribir*/
-    padding: 4px;
-    width: 26%;
+    padding: 6px;
+    width: 45%;
     font-size: 15px;
     z-index: 1;
     text-align: left;
@@ -236,4 +241,9 @@
 	font-size: 25px;
     display: inline-block;
     float: right;
+}
+.scrollable-menu {
+    height: auto;
+    max-height: 750px;
+    overflow-x: hidden;
 }
