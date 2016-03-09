@@ -12,11 +12,11 @@
 	width: 100%;
 	margin-top: 10%;
 }
-.mgt-5{			/*margen superior*/
-	margin-top: 5%;
+.mgt-10{
+	margin-top: 11%;
 }
 .panel1 {		/*tamaño del panel general*/
-	width: 75%;
+	width: 100%;
 	float: left;
 }
 .img1 { 		/*Imagen del perfil, principal*/
@@ -50,7 +50,7 @@
 }
 .inputp{		/*Texto de buscar*/
     position: absolute;
-    left: 17%;
+    left: 20%;
     color: #999;
     pointer-events: none;
 }
@@ -68,7 +68,7 @@
  }
  .input-search {	/*Caja de search para escribir*/
     padding: 6px;
-    width: 45%;
+    width: 75%;
     font-size: 15px;
     z-index: 1;
     text-align: left;
@@ -95,9 +95,10 @@
 	float: right;
 }
 .panel2 {		/*tamaño del panel de mensajes*/
-	width: 65%;
+	width: 104%;
 	display: inline-block;
 	float: right;
+	margin-top: 5%;
 }
 .panel3{
 	height: 56px;
@@ -113,11 +114,19 @@
 	display: inline-block;
 	margin-top:-1%;
 }
+.mrg3{
+	margin-top: -2%;
+}
+.flo{
+	float: none !important;
+	margin-top: -3%;
+}
 .icoons{		/*propiedades de los iconos de adjuntar y 3 puntitos*/
 	font-size: 18px;
 	float: right;
 	display: inline-block;
 	cursor: pointer;
+	color: gray;
 }
 .bkchat {		/*background del chat*/
 	background-image: url(../image/chat-panel-bg.png);
@@ -242,8 +251,8 @@
     display: inline-block;
     float: right;
 }
-.scrollable-menu {
+.scrollable-menu { 		/*Esto es para sacar el scroll*/
     height: auto;
-    max-height: 750px;
+    max-height: 800px;
     overflow-x: hidden;
 }
