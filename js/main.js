@@ -68,7 +68,7 @@ $('body').keyup(function enter(e) {
   var agregar = textarea();
     if (agregar !== '') {
       if(e.keyCode == 13) {       
-        actual();
+       /* actual();*/
         ObtenerLista(agregar);
       clean();
           $('#inputBox').submit();
