@@ -4,7 +4,7 @@ $(document).ready(function() {
     
   
   $("#search-text").keyup(function () {
-     //$(this).addClass('hidden');
+
   
     var searchTerm = $("#search-text").val();
     var listItem = $('.media-body').children('.name');
@@ -48,7 +48,7 @@ $(document).ready(function() {
   });  
                     
 });
-//Buaca encuentra y remplaza
+//Busca y remplaza
 $('.sub-menu').click(function() {
   var data = $(this).attr('data')
   $('.fondo-whatsapp').css({height: '435px',});
@@ -64,18 +64,32 @@ function textarea() {
   var llamarID = document.getElementById("inputBox");
   return llamarID.value;
 }
+
 $('body').keyup(function enter(e) {
   var agregar = textarea();
     if (agregar !== '') {
       if(e.keyCode == 13) {       
-       /* actual();*/
+        actual();
         ObtenerLista(agregar);
       clean();
           $('#inputBox').submit();
       }
     }
 });
-
+function actual() {
+      var fecha=new Date(); //Actualizar fecha.
+      var hora=fecha.getHours(); //hora actual
+      var minuto=fecha.getMinutes(); //minuto actual
+       if (hora<10) { //dos cifras para la hora
+            hora="0"+hora;
+            }
+        if (minuto<10) { //dos cifras para el minuto
+            minuto="0"+minuto;
+            }
+         //ver en el recuadro del reloj:  
+    var time = hora+ ":" + minuto;
+    return time 
+  }
 
 function ObtenerLista(text) {
   var llamarDiv = document.getElementById("box-message");
@@ -90,7 +104,7 @@ function ObtenerLista(text) {
 
   var reloj = document.createElement("div");
   reloj.id = "datatime"
-/*  var times = actual();*/
+  var times = actual();
   reloj.innerHTML = times;
 
 
