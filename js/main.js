@@ -1,23 +1,17 @@
 $(document).ready(function() {
 
   var jobCount = $("#list > .scroll > li > media > .media-body > .name").length;
-    
-  
   $("#search-text").keyup(function () {
 
-  
     var searchTerm = $("#search-text").val();
     var listItem = $('.media-body').children('.name');
-    
     var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
-    
-      //extends :contains to be case insensitive
-  $.extend($.expr[':'], {
-  'containsi': function(elem, i, match, array)
-  {
-    return (elem.textContent || elem.innerText || '').toLowerCase()
-    .indexOf((match[3] || "").toLowerCase()) >= 0;
-  }
+      
+    $.extend($.expr[':'], {
+    'containsi': function(elem, i, match, array)  {
+      return (elem.textContent || elem.innerText || '').toLowerCase()
+      .indexOf((match[3] || "").toLowerCase()) >= 0;
+    }
 });
      
     $(".sub-menu").not(":containsi('" + searchSplit + "')").each(function(e)   {
@@ -33,7 +27,6 @@ $(document).ready(function() {
           $('.sub-menu').removeClass('hiding');
         }, 1);
     });
-    
   
       var jobCount = $("#list > .scroll > li > media > .media-body > .name").length;
 
@@ -43,12 +36,11 @@ $(document).ready(function() {
     }
     else {
       $('.sub-menu').removeClass('empty');
-    }
-    
-  });  
-                    
+    } 
+  });    
 });
-//Busca y remplaza
+
+//BUSCA Y REMPLAZA
 $('.sub-menu').click(function() {
   var data = $(this).attr('data')
   $('.fondo-whatsapp').css({height: '435px',});
@@ -71,11 +63,16 @@ $('body').keyup(function enter(e) {
       if(e.keyCode == 13) {       
         actual();
         ObtenerLista(agregar);
-      clean();
+        guardarmensaje();
+         clean();
           $('#inputBox').submit();
       }
     }
 });
+
+
+
+//ESTA FUNCION ACTUALIZA Y PONE LA HORA EN EL MENSAJE CUANDO LO ENVIAS...
 function actual() {
       var fecha=new Date(); //Actualizar fecha.
       var hora=fecha.getHours(); //hora actual
@@ -85,16 +82,18 @@ function actual() {
             }
         if (minuto<10) { //dos cifras para el minuto
             minuto="0"+minuto;
-            }
-         //ver en el recuadro del reloj:  
+            } 
     var time = hora+ ":" + minuto;
     return time 
   }
+ 
+
+var msj = $("#texto").value;
 
 function ObtenerLista(text) {
   var llamarDiv = document.getElementById("box-message");
   
-  // Crear Elemento
+//CREA EL MENSAJE 
   var crearElemento = document.createElement("div");
   crearElemento.id  = "box-green";
 
@@ -107,13 +106,35 @@ function ObtenerLista(text) {
   var times = actual();
   reloj.innerHTML = times;
 
-
   llamarDiv.appendChild(crearElemento);
   crearElemento.appendChild(parrafo);
   crearElemento.appendChild(reloj);
+};
 
-}
+ mensajes=[]
+  
+  var guardarmensaje = function() {
+    var msj = $("#texto").text();
+    var who = $('#nombres').text()
+    var temp = {
+      msj : msj,
+      person : who
+    }
+  mensajes.push(temp);
+};
 
+//cargar mensajes anteriores
+    var contacto = $('#nombres').text();
+    for (i=0; i<mensajes.length; i++){
+      var temp = mensajes [i];
+      
+      if (contacto == temp.person){
+        alert(temp.msj);
+      }
+    }
+
+
+//LIMPIA LA CAJA DEL DIALOGO
 function clean() {
   var llamarID =document.getElementById("inputBox");
   inputBox.value = "";

@@ -164,6 +164,7 @@ ul li.sub-menu a span {
 	font-size: 20px;
 	top: 10px;
 }
+
 .fa-bars {
 	margin-top: 10px;
 	z-index: 20000;
@@ -186,7 +187,7 @@ ul li.sub-menu a span {
 }
 .name {
 	margin-top: 17px;
-	font-size: 17px;
+	font-size: 16px;
 }
 .fondo-whatsapp {
 	background: url(../image/chat-panel-bg.png)repeat;
