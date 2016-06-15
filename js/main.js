@@ -50,6 +50,7 @@ $('.sub-menu').click(function() {
   $('#foto').html('<img class="media-object avatar" src="image/' +fotos[data]+ '.jpg" alt="...">');
   $('#nombres').html('<p class= "nombre">' +nombres[data]+ '</p>');
   $('#box-message').html('');
+  pintatexto();
 });
 
 function textarea() {
@@ -124,14 +125,30 @@ function ObtenerLista(text) {
 };
 
 //cargar mensajes anteriores
-    var contacto = $('#nombres').text();
-    for (i=0; i<mensajes.length; i++){
-      var temp = mensajes [i];
-      
+var pintatexto = function (){
+  var llamarDiv = document.getElementById("box-message");
+  var contacto = $('#nombres').text();
+  for (i=0; i<mensajes.length; i++){
+    var temp = mensajes [i];
       if (contacto == temp.person){
-        alert(temp.msj);
+        var crearElemento = document.createElement("div");
+        crearElemento.id  = "box-green";
+
+        var parrafo = document.createElement("div");
+        parrafo.id = "texto";
+        parrafo.innerHTML = temp.msj;
+
+        var reloj = document.createElement("div");
+        reloj.id = "datatime"
+        var times = actual();
+        reloj.innerHTML = times;
+
+        llamarDiv.appendChild(crearElemento);
+        crearElemento.appendChild(parrafo);
+        crearElemento.appendChild(reloj);
       }
     }
+  }
 
 
 //LIMPIA LA CAJA DEL DIALOGO
