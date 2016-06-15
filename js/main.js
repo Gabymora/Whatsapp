@@ -45,8 +45,8 @@ $('.sub-menu').click(function() {
   var data = $(this).attr('data')
   $('.fondo-whatsapp').css({height: '435px',});
   $('#message').css({display: 'block',});
-  var fotos = ["gian", "jose", "katy", "andrea", "aldo", "mariapaula", "raymi", "rodulfo", "anamaria"];
-  var nombres = ["Gian", "Jose", "Katy", "Andrea", "Aldo", "Maria Paula", "Raymi", "Rodulfo", "Ana Maria"];
+  var fotos = ["tay", "jose", "katy", "andrea", "aldo", "mariapaula", "raymi", "rodulfo", "anamaria"];
+  var nombres = ["Tayde", "Jose", "Katy", "Andrea", "Aldo", "Maria Paula", "Raymi", "Rodulfo", "Ana Maria"];
   $('#foto').html('<img class="media-object avatar" src="image/' +fotos[data]+ '.jpg" alt="...">');
   $('#nombres').html('<p class= "nombre">' +nombres[data]+ '</p>');
   $('#box-message').html('');
